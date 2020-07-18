@@ -1,0 +1,19 @@
+
+// datasource tells prisma of sqlite db connection
+datasource db {
+  provider = "sqlite" 
+  url      = "file:./dev.db"
+}
+
+//our prisma client we will generate
+generator client {
+    provider = "prisma-client-js"
+}
+
+
+// data models 
+model Message {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  content String
+}

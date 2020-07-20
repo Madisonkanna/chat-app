@@ -7,7 +7,6 @@
  //Main func to send queries to db
  async function main() {
 
-
      const newMessage = await prisma.message.create({
          data: {
              content: 'A message from a user'

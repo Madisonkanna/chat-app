@@ -3,10 +3,18 @@ type Query {
     feed: [Message]!
 }
 
+
+type Feed {
+  messages: [Message!]!
+  count: Int!
+}
+
+
 type Message {
     id: ID!
     content: String!
 }
+
 
 type Mutation {
     message(content: String!): Message!
